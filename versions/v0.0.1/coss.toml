@@ -1,0 +1,144 @@
+# COSS Metadata Template v0.0.1
+# This is the official COSS (Contriboss Open Source Standard) specification template
+# Copy this file to your project root as coss.toml and customize for your project
+
+##########################################################
+# 1. Basic Project Information
+name = ""  # Required: Project name (e.g., "@company/project-name")
+version = ""  # Required: Current version
+description = ""  # Required: Brief project description
+licenses = []  # Required: Array of license identifiers (e.g., ["MIT", "Apache-2.0"])
+ai_contributions = false  # Required: Whether AI was used in development
+coss_compliant = true  # Required: Indicates COSS compliance
+homepage = ""  # Optional: Project homepage URL
+keywords = []  # Optional: Array of keywords for discovery
+
+##########################################################
+# 2. Repository and Issue Tracking
+repository = ""  # Required: Repository URL
+issue_tracker = ""  # Optional: Issue tracker URL (defaults to repository issues)
+documentation = ""  # Optional: Documentation URL
+security_policy = ""  # Optional: Security policy file or URL
+
+##########################################################
+# 3. Languages, Frameworks, and Platforms
+languages = []  # Required: Primary programming languages
+
+[frameworks]
+# Optional: Framework specifications
+# frontend = { name = "React", version = "18.x" }
+# backend = { name = "Express", version = "4.x" }
+
+supported_platforms = []  # Optional: Supported platforms ["linux", "darwin", "windows"]
+
+##########################################################
+# 4. Dependency Lock Files
+[dependency_locks]
+# Optional: Dependency lock file locations
+# javascript = "package-lock.json"
+# python = "poetry.lock"
+# rust = "Cargo.lock"
+
+[packaging]
+# Optional: Packaging commands
+# javascript = "npm run build"
+# python = "poetry build"
+
+##########################################################
+# 5. Maintainers and Governance
+maintainers = []  # Required: Array of maintainer emails
+governance = { type = "informal" }  # Required: Governance structure
+
+##########################################################
+# 6. Linting, Formatting, and Static Analysis
+lint = ""  # Optional: Linting command
+format = ""  # Optional: Formatting command
+static_analysis = []  # Optional: Static analysis commands
+
+##########################################################
+# 7. CI and Build Commands
+build = ""  # Required: Build command
+test = ""  # Required: Test command
+coverage = ""  # Optional: Coverage command
+
+##########################################################
+# 8. Tests and Quality Metrics
+[test_frameworks]
+# Optional: Test framework specifications
+# javascript = "jest"
+# python = "pytest"
+
+test_report_format = ""  # Optional: Test report format
+coverage_threshold = 0  # Optional: Minimum coverage percentage
+
+##########################################################
+# 9. Commit Guidelines and Formats
+commit_message_format = ""  # Optional: Commit message format (e.g., "Conventional Commits")
+
+##########################################################
+# 10. Release and Changelog
+changelog = ""  # Optional: Changelog file location
+release_tag_pattern = ""  # Optional: Release tag pattern (e.g., "v{version}")
+
+##########################################################
+# 11. Badges and Integrations (Optional)
+[badges]
+ci = ""  # Optional: CI badge URL
+coverage = ""  # Optional: Coverage badge URL
+license_badge = ""  # Optional: License badge URL
+
+##########################################################
+# 12. Optional Miscellaneous Fields
+chat = ""  # Optional: Chat/communication channel
+support = { type = "email", contact = "" }  # Optional: Support information
+apidocs = ""  # Optional: API documentation URL
+
+##########################################################
+# 13. Environment and Runtime Info
+[environments]
+# Optional: Runtime environment specifications
+# node = "18.x"
+# python = "3.9+"
+
+##########################################################
+# 14. Data Schemas and Contracts
+[data_contracts]
+# Optional: Data schema specifications
+openapi = ""  # Optional: OpenAPI spec location
+graphql = ""  # Optional: GraphQL schema location
+avro = ""  # Optional: Avro schema location
+
+##########################################################
+# 15. Project Classification
+project_type = ""  # Optional: Project type (e.g., "library", "application", "website")
+maturity = ""  # Optional: Project maturity (e.g., "experimental", "stable", "deprecated")
+audience = []  # Optional: Target audience
+
+##########################################################
+# 16. Localization / Internationalization
+[i18n]
+default_locale = "en"  # Optional: Default locale
+supported_locales = ["en"]  # Optional: Supported locales
+translation_files = ""  # Optional: Translation files location
+
+##########################################################
+# 17. Contribution Automation
+[contribution_tooling]
+dependabot = false  # Optional: Dependabot enabled
+precommit_hooks = false  # Optional: Pre-commit hooks enabled
+ai_review = "disabled"  # Optional: AI review status
+codeowners = ""  # Optional: CODEOWNERS file location
+
+##########################################################
+# 18. Security Scanning and SBOM
+[security]
+sbom = ""  # Optional: Software Bill of Materials location
+vulnerability_scanner = ""  # Optional: Vulnerability scanner
+license_compliance_tool = ""  # Optional: License compliance tool
+
+##########################################################
+# 19. Documentation Quality Flags
+[docs]
+coverage = 0  # Optional: Documentation coverage percentage
+style = ""  # Optional: Documentation style guide
+ai_summary_enabled = false  # Optional: AI-generated summaries enabled
