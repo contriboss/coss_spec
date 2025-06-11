@@ -4,10 +4,16 @@ The official specification repository for COSS (Contriboss Open Source Standard)
 
 ## Quick Installation
 
-Download the latest COSS specification template to your project:
+Install the latest COSS specification template to your project:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/contriboss/coss_spec/master/coss.toml -o coss.toml
+curl -fsSL https://raw.githubusercontent.com/contriboss/coss_spec/master/install.sh | sh
+```
+
+Or download directly:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/contriboss/coss_spec/master/versions/v0.0.2/coss.toml -o coss.toml
 ```
 
 ## What is COSS?
@@ -58,10 +64,10 @@ This repository follows semantic versioning. Each version of the specification i
 To download a specific version:
 
 ```bash
-# Download latest (recommended - works for both single and multi-repo projects)
-curl -fsSL https://raw.githubusercontent.com/contriboss/coss_spec/master/coss.toml -o coss.toml
+# Install latest with script (recommended)
+curl -fsSL https://raw.githubusercontent.com/contriboss/coss_spec/master/install.sh | sh
 
-# Download specific versions
+# Download specific versions directly
 curl -fsSL https://raw.githubusercontent.com/contriboss/coss_spec/master/versions/v0.0.1/coss.toml -o coss.toml
 curl -fsSL https://raw.githubusercontent.com/contriboss/coss_spec/master/versions/v0.0.2/coss.toml -o coss.toml
 ```
