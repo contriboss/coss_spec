@@ -7,10 +7,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-### Added
-- Initial COSS specification structure
+## [0.0.2] - 2025-06-11
 
-## [0.0.1] - 2025-06-01
+### Added
+- **Submodules Support**: New `[submodules]` section for modular COSS architectures
+- Support for referencing other COSS files via git URLs, HTTP URLs, and relative paths
+- Extended format for custom paths and version specifications
+- Enables multi-repo and microservice architecture support
+
+### Examples
+- `frontend = "git@github.com:company/frontend.git"`
+- `backend = "https://raw.githubusercontent.com/company/backend/main/coss.toml"`
+- `shared = "./shared/coss.toml"`
+- `api = { source = "git@github.com:company/api.git", path = "coss.toml", version = "v1.2.0" }`
+
+## [0.0.1] - 2025-06-10
 
 ### Added
 - Initial release of COSS (Contriboss Open Source Standard) specification
@@ -26,5 +37,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Version Management**: Symlinked latest version for easy access
 - **Easy Installation**: One-line curl command for template download
 
-[Unreleased]: https://github.com/contriboss/coss_spec/compare/v0.0.1...HEAD
+[Unreleased]: https://github.com/contriboss/coss_spec/compare/v0.0.2...HEAD
+[0.0.2]: https://github.com/contriboss/coss_spec/compare/v0.0.1...v0.0.2
 [0.0.1]: https://github.com/contriboss/coss_spec/releases/tag/v0.0.1

@@ -49,20 +49,27 @@ The COSS specification is organized into the following sections:
 
 This repository follows semantic versioning. Each version of the specification is available in the `versions/` directory:
 
-- `versions/v0.0.1/` - Initial specification
-- `coss.toml` - Symlink to the latest stable version
+- `versions/v0.0.1/` - Initial specification (19 sections)
+- `versions/v0.0.2/` - Added submodules support for modular architectures
+- `coss.toml` - Symlink to the latest version (currently v0.0.2)
 
 ## Installation by Version
 
 To download a specific version:
 
 ```bash
-# Download v0.0.1
-curl -fsSL https://raw.githubusercontent.com/contriboss/coss_spec/master/versions/v0.0.1/coss.toml -o coss.toml
-
-# Download latest (recommended)
+# Download latest (recommended - works for both single and multi-repo projects)
 curl -fsSL https://raw.githubusercontent.com/contriboss/coss_spec/master/coss.toml -o coss.toml
+
+# Download specific versions
+curl -fsSL https://raw.githubusercontent.com/contriboss/coss_spec/master/versions/v0.0.1/coss.toml -o coss.toml
+curl -fsSL https://raw.githubusercontent.com/contriboss/coss_spec/master/versions/v0.0.2/coss.toml -o coss.toml
 ```
+
+### Version Features
+
+- **v0.0.1**: Core COSS specification with 19 sections covering all essential metadata
+- **v0.0.2**: Adds optional `[submodules]` section - works for single projects (leave empty) or multi-repo architectures
 
 ## Example Projects
 
