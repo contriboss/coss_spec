@@ -1,4 +1,4 @@
-# COSS Metadata Template v0.0.2
+# COSS Metadata Template v0.0.3
 # This is the official COSS (Contribution Open Source Standard) specification template
 # Copy this file to your project root as coss.toml and customize for your project
 
@@ -160,3 +160,22 @@ ai_summary_enabled = false  # Optional: AI-generated summaries enabled
 
 # Extended format for custom paths and versions:
 # component_name = { source = "reference", path = "custom/path/coss.toml", version = "tag_or_branch" }
+
+##########################################################
+# 21. Package Identification (PURL)
+[package_identity]
+# Optional: Package URL (PURL) for vendor-agnostic package identification
+# PURL format: pkg:type/namespace/name@version?qualifiers#subpath
+# Examples:
+# purl = "pkg:npm/@company/package@1.0.0"
+# purl = "pkg:pypi/django@3.2.0"
+# purl = "pkg:github/contriboss/coss_spec@v0.0.3"
+purl = ""
+
+# Optional: Dependencies with their PURLs for supply chain tracking
+[dependencies_purl]
+# Map dependency names to their Package URLs
+# Examples:
+# react = "pkg:npm/react@18.2.0"
+# django = "pkg:pypi/django@4.2.0"
+# tokio = "pkg:cargo/tokio@1.28.0"
