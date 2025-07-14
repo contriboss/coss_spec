@@ -1,6 +1,6 @@
 # COSS Specification
 
-The official specification repository for COSS (Contriboss Open Source Standard) - promoting software neutrality and anti-vendor lock-in principles.
+The official specification repository for COSS (Contribution Open Source Standard) - promoting software neutrality and anti-vendor lock-in principles.
 
 ## Quick Installation
 
@@ -13,12 +13,12 @@ curl -fsSL https://raw.githubusercontent.com/contriboss/coss_spec/master/install
 Or download directly:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/contriboss/coss_spec/master/versions/v0.0.2/coss.toml -o coss.toml
+curl -fsSL https://raw.githubusercontent.com/contriboss/coss_spec/master/versions/v0.0.3/coss.toml -o coss.toml
 ```
 
 ## What is COSS?
 
-COSS (Contriboss Open Source Standard) is a comprehensive metadata specification that promotes:
+COSS (Contribution Open Source Standard) is a comprehensive metadata specification that promotes:
 
 - **Software Neutrality**: Avoiding vendor lock-in through standardized metadata
 - **Project Transparency**: Clear documentation of dependencies, governance, and practices
@@ -37,6 +37,7 @@ COSS (Contriboss Open Source Standard) is a comprehensive metadata specification
 The COSS specification is organized into the following sections:
 
 ### Required Fields
+
 - **Basic Project Information**: Name, version, description, licenses
 - **Repository Information**: Repository URL, issue tracking
 - **Languages and Frameworks**: Primary technologies used
@@ -44,6 +45,7 @@ The COSS specification is organized into the following sections:
 - **Maintainers and Governance**: Who maintains the project and how
 
 ### Optional Fields
+
 - **Dependency Management**: Lock files and packaging commands
 - **Quality Tooling**: Linting, formatting, static analysis
 - **Security and Compliance**: Vulnerability scanning, SBOM
@@ -57,7 +59,8 @@ This repository follows semantic versioning. Each version of the specification i
 
 - `versions/v0.0.1/` - Initial specification (19 sections)
 - `versions/v0.0.2/` - Added submodules support for modular architectures
-- `coss.toml` - Symlink to the latest version (currently v0.0.2)
+- `versions/v0.0.3/` - Added Package URL (PURL) support for vendor-agnostic package identification
+- `coss.toml` - Symlink to the latest version (currently v0.0.3)
 
 ## Installation by Version
 
@@ -69,13 +72,14 @@ curl -fsSL https://raw.githubusercontent.com/contriboss/coss_spec/master/install
 
 # Download specific versions directly
 curl -fsSL https://raw.githubusercontent.com/contriboss/coss_spec/master/versions/v0.0.1/coss.toml -o coss.toml
-curl -fsSL https://raw.githubusercontent.com/contriboss/coss_spec/master/versions/v0.0.2/coss.toml -o coss.toml
+curl -fsSL https://raw.githubusercontent.com/contriboss/coss_spec/master/versions/v0.0.3/coss.toml -o coss.toml
 ```
 
 ### Version Features
 
 - **v0.0.1**: Core COSS specification with 19 sections covering all essential metadata
 - **v0.0.2**: Adds optional `[submodules]` section - works for single projects (leave empty) or multi-repo architectures
+- **v0.0.3**: Adds `[package_identity]` and `[dependencies_purl]` sections for Package URL (PURL) based vendor-agnostic package identification
 
 ## Example Projects
 
@@ -104,4 +108,4 @@ This specification is released under the MIT License. See [LICENSE](LICENSE) for
 
 ---
 
-*COSS promotes software neutrality, transparency, and community trust in open source projects.*
+_COSS promotes software neutrality, transparency, and community trust in open source projects._
