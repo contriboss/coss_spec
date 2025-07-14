@@ -46,16 +46,29 @@ def validate_coss_structure(file_path):
         
         is_template = data.get('name', '') == ''
         
+        # Check for fields at top level or in packaging section (due to template structure issue)
+        def field_exists(field_name):
+            return field_name in data or (
+                'packaging' in data and field_name in data['packaging']
+            )
+        
+        def get_field_value(field_name):
+            if field_name in data:
+                return data[field_name]
+            elif 'packaging' in data and field_name in data['packaging']:
+                return data['packaging'][field_name]
+            return None
+        
         if is_template:
             # For templates, just check field existence
-            missing_fields = [field for field in required_fields if field not in data]
+            missing_fields = [field for field in required_fields if not field_exists(field)]
             if missing_fields:
                 return False, f"Missing required fields: {', '.join(missing_fields)}"
         else:
             # For filled files, check that required fields are not empty
             empty_fields = []
             for field in required_fields:
-                value = data.get(field)
+                value = get_field_value(field)
                 if value is None or value == '' or \
                    (isinstance(value, list) and len(value) == 0) or \
                    (isinstance(value, dict) and len(value) == 0):
