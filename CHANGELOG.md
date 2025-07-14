@@ -5,6 +5,21 @@ All notable changes to the COSS specification will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 0.0.3 (2025-07-14)
+
+
+### Features
+
+* add Package URL (PURL) support and fix COSS naming ([ecf53b3](https://github.com/contriboss/coss_spec/commit/ecf53b3d2fd5f6d28a320563189e00e0deef7ab3))
+* add Package URL (PURL) support for vendor-agnostic package identification ([fec5059](https://github.com/contriboss/coss_spec/commit/fec50593e558ed36d2c31d0696aadb60153e08fe))
+
+
+### Bug Fixes
+
+* configure release-please for simple release type ([dd0a0ec](https://github.com/contriboss/coss_spec/commit/dd0a0ecbef2e035c8862d6b064963b115d474df3))
+* handle TOML fields in packaging section during validation ([af619e6](https://github.com/contriboss/coss_spec/commit/af619e61c6c6bdde1ecf3c972a91c90675a58848))
+* install instructions ([4ec3502](https://github.com/contriboss/coss_spec/commit/4ec3502ac59533e6dad2a214f83c453db51c99d3))
+
 ## [Unreleased]
 
 ## [0.0.2] - 2025-06-11
